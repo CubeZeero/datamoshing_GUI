@@ -76,3 +76,6 @@ def apply_vectors(vectors, input_video, output_video, method='add'):
     os.remove('apply_vectors.js')
     os.remove('tmp.mpg')
     os.remove('vector_tmp.mp4')
+
+    print('video glitch successfully.')
+    time.sleep(1)

@@ -5,6 +5,7 @@ import subprocess
 import os
 import importlib.util as imp
 from vector_util import get_vectors, apply_vectors
+import sys
 
 
 def parse_args():
@@ -42,7 +43,7 @@ if __name__ == '__main__':
         except Exception as e:
             # TODO: proper error handling
             print(f'couldn\'t apply function mosh_frames from script: {script_path}:\n{e}')
-            exit(0)
+            sys.exit()
     else:
         subprocess.call(f'ffgac -i {input_video} -an -mpv_flags +nopimb+forcemv -qscale:v 0 -g {gop_period}' +
                         ' -vcodec mpeg2video -f rawvideo -y tmp.mpg', shell=True)
@@ -53,3 +54,6 @@ if __name__ == '__main__':
         # remove temp files
         os.remove('tmp.mpg')
         os.remove('vector_tmp.mp4')
+
+        print('video glitch successfully.')
+        time.sleep(1)

@@ -2,7 +2,7 @@
 
 import argparse
 from vector_util import *
-
+import sys
 
 def parse_args():
     parser = argparse.ArgumentParser()
@@ -27,7 +27,7 @@ if __name__ == '__main__':
     # check that either extract_from or vector_file is given
     if not ((extract_from == '') ^ (vector_file == '')):
         print('Only one of -v or -e must be given')
-        exit(0)
+        sys.exit()
 
     vectors = []
 
@@ -39,12 +39,12 @@ if __name__ == '__main__':
         if transfer_to == '':
             with open(output, 'w') as f:
                 json.dump(vectors, f)
-            exit(0)
+            sys.exit()
     elif vector_file:
         # step 1b: read vectors from file
         if not transfer_to:
             print('Please specify file to transfer vectors to using -t')
-            exit(0)
+            sys.exit()
 
         with open(vector_file, 'r') as f:
             vectors = json.load(f)
