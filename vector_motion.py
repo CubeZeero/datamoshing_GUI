@@ -47,5 +47,9 @@ if __name__ == '__main__':
         subprocess.call(f'ffgac -i {input_video} -an -mpv_flags +nopimb+forcemv -qscale:v 0 -g {gop_period}' +
                         ' -vcodec mpeg2video -f rawvideo -y tmp.mpg', shell=True)
 
-        subprocess.call(f'ffedit -i tmp.mpg -f mv -s {script_path} -o {output_video}', shell=True)
+        subprocess.call(f'ffedit -i tmp.mpg -f mv -s {script_path} -o vector_tmp.mp4', shell=True)
+        subprocess.call(f'ffmpeg -y -i vector_tmp.mp4 {output_video}', shell=True)
+
+        # remove temp files
         os.remove('tmp.mpg')
+        os.remove('vector_tmp.mp4')

@@ -3,7 +3,8 @@
 import os
 import argparse
 import subprocess
-
+import sys
+import time
 
 parser = argparse.ArgumentParser()
 parser.add_argument('input_video', type=str, help='File to be moshed')
@@ -40,7 +41,9 @@ def cleanup():
     out_file.close()
     os.remove(input_avi)
     os.remove(output_avi)
-    exit(0)
+
+    print('video glitch successfully.')
+    sys.exit()
 
 
 # because we used 'rb' above when the file is read the output is in byte format instead of Unicode strings

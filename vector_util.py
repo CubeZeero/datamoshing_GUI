@@ -69,8 +69,10 @@ def apply_vectors(vectors, input_video, output_video, method='add'):
         f.write(script_contents.replace('var vectors = [];', f'var vectors = {json.dumps(vectors)};'))
 
     # apply the effect
-    subprocess.call(f'ffedit -i tmp.mpg -f mv -s {script_path} -o {output_video}', shell=True)
+    subprocess.call(f'ffedit -i tmp.mpg -f mv -s {script_path} -o vector_tmp.mp4', shell=True)
+    subprocess.call(f'ffmpeg -y -i vector_tmp.mp4 {output_video}', shell=True)
 
     # remove temp files
     os.remove('apply_vectors.js')
     os.remove('tmp.mpg')
+    os.remove('vector_tmp.mp4')
