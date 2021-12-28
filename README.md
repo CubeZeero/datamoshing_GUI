@@ -1,5 +1,7 @@
 # Datamoshing_GUI
 
+![](https://i.imgur.com/X65KI8L.png)
+
 Datamoshing made easy. 
 
 This repository is a forked version of the [this repository](https://github.com/tiberiuiancu/datamoshing), modified to be GUI-based and easier to use.
