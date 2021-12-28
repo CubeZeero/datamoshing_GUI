@@ -6,14 +6,15 @@ import os
 import importlib.util as imp
 from vector_util import get_vectors, apply_vectors
 import sys
-
+import numpy
+import time
 
 def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument('input_video', type=str, help='specifies input file')
     parser.add_argument('-s', type=str, dest='script_path', help='path to the script', required=True)
     parser.add_argument('-g', type=str, default=1000, dest='gop_period', help='I-frame period (in frames)')
-    parser.add_argument('-o', default='moshed.mpg', type=str, dest='output_video',
+    parser.add_argument('-o', default='moshed.mp4', type=str, dest='output_video',
                         help='output file for the moshed video')
     return parser.parse_args().__dict__
 

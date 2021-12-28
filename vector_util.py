@@ -1,7 +1,8 @@
 import os
 import subprocess
 import json
-
+import numpy
+import time
 
 def get_vectors(input_video):
     # extract video data using ffedit

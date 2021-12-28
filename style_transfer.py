@@ -3,6 +3,8 @@
 import argparse
 from vector_util import *
 import sys
+import numpy
+import time
 
 def parse_args():
     parser = argparse.ArgumentParser()
