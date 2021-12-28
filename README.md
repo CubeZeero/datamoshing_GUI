@@ -1,8 +1,10 @@
 # Datamoshing_GUI
 
+![](https://i.imgur.com/X65KI8L.png)
+
 Datamoshing made easy. 
 
-This repository is a forked version of the [this repository](https://github.com/tiberiuiancu/datamoshing), modified to be GUI-based and easier to use.
+This repository is a forked version of the [Tiberiu Iancu's datamoshing repository](https://github.com/tiberiuiancu/datamoshing), modified to be GUI-based and easier to use.
 
 I would like to thank you [Tiberiu Iancu](https://github.com/tiberiuiancu) for creating such a wonderful project.
 
@@ -26,6 +28,14 @@ You will need `ffmpeg`, `ffedit`, and `ffgac` to run this script.
 
 **Important:**
 `After downloading, you will need to set the Path environment variable`
+
+## Download
+
+Please download it from the [release page.](https://github.com/CubeZeero/datamoshing_GUI/releases/tag/v1.0)
+
+Only built and released the windows version, but if you have knowledge of python, you can make it work on other operating systems.
+
+I don't own any OS other than windows, so I'm hoping someone else can build it for me. :)
 
 # Effects
 
