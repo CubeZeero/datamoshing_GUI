@@ -397,17 +397,38 @@ while True:
                     print_error('Specify output file. (Required)')
                     st_error_sw = 1
 
+                if (os.path.exists(st_values['-vector_path-']) == False and st_values['-vector_path-'] != '') == True:
+                    print_error('Vector Path does not exist.')
+                    st_error_sw = 1
+
+                if (os.path.exists(st_values['-transfer_path-']) == False and st_values['-transfer_path-'] != '') == True:
+                    print_error('Transfer Path does not exist.')
+                    st_error_sw = 1
+
+                if (os.path.exists(st_values['-extract_path-']) == False and st_values['-extract_path-'] != '') == True:
+                    print_error('Extract Path does not exist.')
+                    st_error_sw = 1
+
                 if not ((st_values['-extract_path-'] == '') ^ (st_values['-vector_path-'] == '')):
                     print_error('Please specify only one, either Extract or Vector.')
                     st_error_sw = 1
 
-                if (os.path.exists(st_values['-vector_path-']) == True and st_values['-vector_path-'] != '') and st_values['-output_path-'][-4:] == 'json':
-                    print_error('It is not possible to output a json file with a json file specified in vector path.')
+                if os.path.exists(st_values['-vector_path-']) == True and st_values['-output_path-'][-4:] == 'json':
+                    print_error('It is not possible to output a json file with a json file specified in vector.')
                     st_error_sw = 1
 
-                if (os.path.exists(st_values['-extract_path-']) == True and st_values['-extract_path-'] != '')\
-                and (os.path.exists(st_values['-transfer_path-']) == True and st_values['-transfer_path-'] != '') and st_values['-output_path-'][-4:] == 'json':
-                    print_error('If the Extract path and Transfer path are specified, it is not possible to output json files, only mp4.')
+                if os.path.exists(st_values['-vector_path-']) == True and os.path.exists(st_values['-transfer_path-']) == False:
+                    print_error('If you want to use Vector to output mp4, specify Transfer as well.')
+                    st_error_sw = 1
+
+                if os.path.exists(st_values['-extract_path-']) == True\
+                and os.path.exists(st_values['-transfer_path-']) == True and st_values['-output_path-'][-4:] == 'json':
+                    print_error('If the Extract and Transfer are specified, it is not possible to output json files, only mp4.')
+                    st_error_sw = 1
+
+                if os.path.exists(st_values['-extract_path-']) == True\
+                and st_values['-transfer_path-'] == '' and st_values['-output_path-'][-3:] == 'mp4':
+                    print_error('If only the Extract is specified, only json files can be output.')
                     st_error_sw = 1
 
                 if st_error_sw == 1:
