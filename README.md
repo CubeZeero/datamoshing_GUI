@@ -27,6 +27,10 @@ You will need `ffmpeg`, `ffedit`, and `ffgac` to run this script.
 **Important:**
 `After downloading, you will need to set the Path environment variable`
 
+## Download
+
+Please download it from the [release page.](https://github.com/CubeZeero/datamoshing_GUI/releases/tag/v1.0)
+
 # Effects
 
 ## ffmpeg_datamosh
