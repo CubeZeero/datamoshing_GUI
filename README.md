@@ -33,6 +33,10 @@ You will need `ffmpeg`, `ffedit`, and `ffgac` to run this script.
 
 Please download it from the [release page.](https://github.com/CubeZeero/datamoshing_GUI/releases/tag/v1.0)
 
+Only built and released the windows version, but if you have knowledge of python, you can make it work on other operating systems.
+
+I don't own any OS other than windows, so I'm hoping someone else can build it for me. :)
+
 # Effects
 
 ## ffmpeg_datamosh
