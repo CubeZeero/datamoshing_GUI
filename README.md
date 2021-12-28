@@ -35,7 +35,7 @@ Please download it from the [release page.](https://github.com/CubeZeero/datamos
 
 Only built and released the windows version, but if you have knowledge of python, you can make it work on other operating systems.
 
-I don't own any OS other than windows, so I'm hoping someone else can build it for me. :)
+I don't own any OS other than windows, so I'm hoping someone else can build :)
 
 # Effects
 
