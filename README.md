@@ -4,7 +4,7 @@
 
 Datamoshing made easy. 
 
-This repository is a forked version of the [this repository](https://github.com/tiberiuiancu/datamoshing), modified to be GUI-based and easier to use.
+This repository is a forked version of the [Tiberiu Iancu's datamoshing repository](https://github.com/tiberiuiancu/datamoshing), modified to be GUI-based and easier to use.
 
 I would like to thank you [Tiberiu Iancu](https://github.com/tiberiuiancu) for creating such a wonderful project.
 
